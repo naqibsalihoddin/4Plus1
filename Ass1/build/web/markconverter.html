@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Mark Converter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    </head>
+    <body>
+           <div class="jumbotron">
+            <div class="container">
+                <form action="./markconverter" method="GET"> 
+                    <h3>MARK CONVERTER</h3>
+  		            <div class="form-group">
+  		                <label>Mark in percent 
+  		                <input type="text" name="markTextBox" class="form-control">
+  		                </label>
+  		            </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="gradep" value="Grade">
+                            Grade
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="gradep" value="Convert">
+                            Point
+                        </label>
+                    </div>
+                    
+                    <input type="submit" name="Convert" value="Convert" class="btn btn-default">
+
+                 </form>
+            </div>
+           </div>
+    </body>
+</html>

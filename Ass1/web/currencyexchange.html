@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+    table, th, td {
+    border: 0px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 5px;
+    text-align: center;
+    }
+    table#t02 th	{
+    background-color: purple;
+    color: white;
+    }
+    </style>
+               <form name="currencyexchange" action="./currencyexchange" method="GET">
+                
+    
+<table style="width:100%" id="t02">
+  <tr>
+    <th colspan="2">Currency Exchange</th>
+  </tr>
+  <tr>
+    <td>VND: <input type="text" name="vnd" size="10"><br /></td>
+    <td><style>
+table, th, td {
+    border: 1px solid black;
+    
+}
+th, td {
+    padding: 1px;
+}
+</style>
+<table style="width:100%">
+<tr>
+    <th colspan="2">Exchange Rates</th>	 
+  
+<tr>
+    <td>Currency</td>
+    <td>Rate</td>		
+<tr>
+    <td>USD</td>
+    <td>16,452</td>		
+<tr>
+    <td>EUR</td>
+    <td>25,170.38</td>
+<tr>
+    <td>JPY</td>
+    <td>151.23</td>
+		
+</tr>
+</table></td>
+  </tr>
+  <tr>
+    <td>
+        <input type="radio" name="RadioButton" value="USD">USD
+        <input type="radio" name="RadioButton" value="EUR">EUR
+        <input type="radio" name="RadioButton" value="JPY">JPY<br>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="submit" value="Exchange Currency"><br /></td>
+  </tr>
+</table>
+        </form>
+    </body>
+</html>

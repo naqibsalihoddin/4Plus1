@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+
+  <form role="form" action="./TUITIONServlet" method="GET">
+
+      <h1>TUITION CALCULATION</h1>
+      <br><br>
+<div class="form-group">
+      <label for="name">Number of AAS course(s):</label>
+      <input type="text" name="aasTextBox" class="form-control" id="Name" placeholder="Enter your number of course">
+    </div>
+    <div class="form-group">
+      <label for="email">Number of ESL course(s):</label>
+      <input type="email" name="eslTextBox" class="form-control" id="email" placeholder="Enter your number of course">
+    </div>
+
+  <label for="sel1">Type of student:</label>
+  <select class="form-control" id="sel1" name="discountRateSelectBox">
+    <option value ="0">Normal</option>
+    <option value ="10">$10 discount</option>
+    <option value ="20">$20 discount</option>
+    <option value ="30">$30 discount</option>
+  </select>
+</div>
+    <br><br>
+    <div>
+    <button type="submit" class="btn btn-default center-block">Submit</button>
+    </div>
+
+</body> 
+</html>

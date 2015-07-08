@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    
+    <body>
+       
+       <div class="jumbotron">
+       <div class="container">
+          <div class="row">
+              <form name="bmiForm" action="./bmi" method="GET">
+                  <h3>Body Mass Index</h3>
+             <div class="form-group">
+                  <label> Weight (KG)</label>
+                  <input type="text" id="weightTextBox" name="weightTextBox" class="form-control"> 
+             </div>
+  
+             <div class="form-group">
+                  <label>Height (M) </label>
+                  <input type="text" id="heightTextBox" name="heightTextBox" class="form-control">
+              </div> 
+
+                 <input type="submit" value="Calculate BMI" name="calculateBMIButton" class="btn btn-default">
+
+           </form>
+          </div>
+           </div>
+           
+       </div>
+
+ 
+
+    </body>
+</html>

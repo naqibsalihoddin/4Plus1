@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <form name="Grade" action="./gradeServlet" method="GET">
+                
+    <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 th	{
+    background-color: black;
+    color: white;
+}
+</style>
+<table style="width:100%" id="t01">
+  <tr>
+    <th>Grade Calculator</th>
+  </tr>
+  <tr>
+    <td>Midterm: <input type="text" name="midTextBox" size="10">(30%)<br/>
+    
+    Final: <input type="text" name="finalTextBox" size="10">(30%)<br/>
+    
+    Project: <input type="text" name="projectTextBox" size="10">(40%)<br/>
+    </td>
+  </tr>
+    <td><input type="submit" value="Get Result" name="convertButton"><br /></td>
+  </tr>
+</table>
+        </form>
+    </body>
+</html>
