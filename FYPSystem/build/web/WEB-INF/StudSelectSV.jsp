@@ -195,8 +195,10 @@ DB objDB = new DB();
     
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerstudent.jsp" %>
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
 
     <div class="container">
     <div style="height:auto" id="WrapperBody">

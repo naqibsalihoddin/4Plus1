@@ -136,10 +136,11 @@ String sess = "";
     <body>
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerstudent.jsp" %>
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
 
-    <div class="container">
+   
     <div style="height:auto" id="WrapperBody">
 <center>
                     <br>
@@ -212,7 +213,7 @@ String sess = "";
          </div>
                 <br><br><br>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

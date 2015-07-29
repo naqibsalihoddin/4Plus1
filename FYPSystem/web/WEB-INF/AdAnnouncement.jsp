@@ -80,95 +80,82 @@ String Name = (String)session.getAttribute("name");
         
 
         <script src="js/jquery.min.js"></script>
-         <script src="js/bootstrap.min.js"></script>
-         <script src="js/dropdown.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/dropdown.js"></script>
         <script type="text/javascript" src="js/AdAnnouncement.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Final Year Project Management System</title>
     </head>
+    		
     <style type="text/css">
-    .addAnnShow,
-    .editAnnShow{
-            display: ;
-    }
-
-    
-    .addAnnHide,
-    .editAnnHide{
-            display:none;
-    }
-    
-    
-   
+		.addAnnShow,
+		.editAnnShow	{
+			display: ;	
+		}
+		.addAnnHide,
+		.editAnnHide	{
+			display:none;
+		}
     </style>
   
     <body>
-           <div id="Wrapper">
-         
-         <%@ include file="headeradmin.jsp" %>
-         
-    <div class="container">
-    <div style="height:auto" id="WrapperBody">
-        
+        <div id="Wrapper" style="padding-top:50px;">
+        	<%@ include file="headeradmin.jsp" %>
+				<img src="Images/headerbg3.png" alt="" class="home-img">
 
-        <center>
-          <h2>Announcement</h2>
-                <span>
-                    <table style="width:80%" class="table table-bordered table-hover">
-                    <form name="editExpertise">
-                        <tr bgcolor="#ebebeb" style="font-weight:bold" align="center">
-                            
-                            <td  width="550px">Announcement</td>
-                            <td  width="50px">Edit</td>
-                            <td  width="50px">Delete</td>
-                            
-                        </tr>
-                       
-                         <% String classExpertise = "addAnnShow";
-                            if(!(aID==null))
-                                classExpertise = "addAnnHide";
-                            if(row > 0)
-                                {   for(int i=0;i<annID.size();i++)
-                                   {
-                                        
-                                          
-                           %>
-                       <tr>
-                           <td ><div style="font-weight:bold"><%=annTitle.get(i)%></div><br style="line-height:1px">
-                            <%=annDesc.get(i)%>
-                            <br style="line-height:1px">
-                            Show announcement:<%=annShow.get(i)%></td>
-                           <td valign="top" align="center" ><span onclick="editAnnID(<%=annID.get(i)%>)"><i style="font-size:1.5em" class="glyphicon glyphicon-edit"></i></span></td>
-                           <td valign="top" align="center" ><span  onclick="deleteAnnID(<%=annID.get(i)%>)"><i style="font-size:1.5em" class="glyphicon glyphicon-remove"></i></span></td>   
-                        </tr>
-                            <%      }
-                              }
-                            else
-                                {%>
-                        <tr>
-                            <td colspan="3">There is no data selected from data base</td>
-                        </tr>
-                        <%      }%>
-                        <input type="hidden" name="annID" value="">
-                        </table>
-                        <table>
-                        <tr>
-                            <td colspan="3" align="center" id="btnAddAnn" class="<%=classExpertise%>"><span class="btn btn-success" onclick="showAddAnn()">&emsp;Add&nbsp;<i class="glyphicon glyphicon-plus"></i>&emsp;</span>
-                            </td>
-                            
-                        </tr>
-                        </table>
-                            <table>
-                        <tr>
-                            <td colspan="3" class="addAnnHide" id="itemAddAnn">
-                                <br style="line-height:5px">
-                                <br>
-                                   
-                                       
-                                        <table class="table table-bordered">
-                                            <tr bgcolor="#ebebeb" >
-                                                <td colspan="4" align="center"><b>Add Announcement</td>
-                                            </tr>
+    				<div style="height:auto" id="WrapperBody">
+         				<center>
+          					<h2>Announcement</h2>
+                				<span>
+                    				<table style="width:80%" class="table table-bordered table-hover">
+										<form name="editExpertise">
+											<tr bgcolor="#ebebeb" style="font-weight:bold" align="center">
+												<td  width="550px">Announcement</td>
+												<td  width="50px">Edit</td>
+												<td  width="50px">Delete</td>
+											</tr>
+											<% String classExpertise = "addAnnShow";
+												if(!(aID==null))
+													classExpertise = "addAnnHide";
+												if(row > 0)
+													{   for(int i=0;i<annID.size();i++)
+													   {
+											%>
+										   	<tr>
+											   <td ><div style="font-weight:bold"><%=annTitle.get(i)%></div>
+											   <br style="line-height:1px">
+												<%=annDesc.get(i)%>
+												<br style="line-height:1px">
+												Show announcement:<%=annShow.get(i)%></td>
+											   <td valign="top" align="center" ><span onclick="editAnnID(<%=annID.get(i)%>)"><i style="font-size:1.5em" class="glyphicon glyphicon-edit"></i></span></td>
+											   <td valign="top" align="center" ><span  onclick="deleteAnnID(<%=annID.get(i)%>)"><i style="font-size:1.5em" class="glyphicon glyphicon-remove"></i></span></td>   
+											</tr>
+                            					<%      }
+                            					}
+                           						else
+                                				{%>
+                        					<tr>
+                            					<td colspan="3">There is no data selected from data base</td>
+                        					</tr>
+                       						 <%      }%>
+											<input type="hidden" name="annID" value="">
+									</table>
+											
+									<table>
+										<tr>
+											<td colspan="3" align="center" id="btnAddAnn" class="<%=classExpertise%>"><span class="btn btn-success" onclick="showAddAnn()">&emsp;Add&nbsp;<i class="glyphicon glyphicon-plus"></i>&emsp;</span>
+											</td>
+										</tr>
+                        			</table>
+                            		<table>
+                        				<tr>
+                            				<td colspan="3" class="addAnnHide" id="itemAddAnn">
+                                				<br style="line-height:5px">
+                                				<br>                         
+                                       				<table class="table table-bordered">
+                                            			<tr bgcolor="#ebebeb" >
+                                                		<td colspan="4" align="center"><b>Add Announcement</td>
+                                            			</tr>
                                                  <tr>
                                                     <td>Title</td>
                                                    
@@ -278,8 +265,7 @@ String Name = (String)session.getAttribute("name");
          <br>
          </div>
 </div>
-</div>
-         <br><br><br>
+                 <br><br><br>
          <%@ include file="Footer.jsp" %>
         
 </div>

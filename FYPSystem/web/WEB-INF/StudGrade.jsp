@@ -109,10 +109,11 @@ String query2 ="select a.studName, b.jumlah as pembentangan, c.total as penilaia
     <body>
       
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerstudent.jsp" %>
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
 
-    <div class="container">
+   
     <div style="height:auto" id="WrapperBody">
 <center>
                    <%if(flag.equals("Yes")){%>
@@ -168,7 +169,7 @@ String query2 ="select a.studName, b.jumlah as pembentangan, c.total as penilaia
          </div>
                 <br><br><br>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

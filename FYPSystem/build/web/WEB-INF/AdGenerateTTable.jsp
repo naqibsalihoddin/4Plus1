@@ -106,12 +106,13 @@ int q_row=0;
     
     <body>
          
-        <div id="Wrapper">
+        <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headeradmin.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
          
     
-    <div class="container">
+   
     <div style="height:auto" id="WrapperBody">
        
         <center>
@@ -146,11 +147,11 @@ int q_row=0;
                         </tr>
                         <tr>
                             <td style="width:75px;">&nbsp;</td>
-                            <td style="width:170px;" id="adTitle" bgcolor="#ebebeb" >Monday</td>
+                            <td style="width:170px;" id="adTitle" bgcolor="#ebebeb" >Sunday</td>
+                            <td style="width:170px;" id="adTitle">Monday</td>
                             <td style="width:170px;" id="adTitle">Tuesday</td>
                             <td style="width:170px;" id="adTitle">Wednesday</td>
                             <td style="width:170px;" id="adTitle">Thursday</td>
-                            <td style="width:170px;" id="adTitle">Friday</td>
                         </tr>
                         
                         <%
@@ -278,7 +279,7 @@ int q_row=0;
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

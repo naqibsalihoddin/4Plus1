@@ -119,11 +119,12 @@ String statusTitle ="";
     
   
     <body>
-    <div id="Wrapper">
+    <div id="Wrapper" style="padding-top:50px;">
          
          <%@ include file="headeradmin.jsp" %>
-         
-    <div class="container">
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
+   
     <div style="height:auto" id="WrapperBody">
         <span style="position:absolute;top:180px;left:130px"  onclick="javascript:history.back()"><i style="font-size:2.5em;color:#f0ad4e" class="fa fa-arrow-circle-left"></i></span> 
         <center>
@@ -240,7 +241,7 @@ String statusTitle ="";
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
         

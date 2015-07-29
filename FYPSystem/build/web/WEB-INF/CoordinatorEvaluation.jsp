@@ -89,12 +89,13 @@ String Name = (String)session.getAttribute("name");
     </style>
     <body>
          
-        <div id="Wrapper">
+        <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headeradmin.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
          
     
-    <div class="container">
+  
     <div style="height:auto" id="WrapperBody">
         <br>
 
@@ -134,7 +135,7 @@ String Name = (String)session.getAttribute("name");
                     </table>
                     </form>
          </div>
-                    </div>
+                    
           
         </center>
         <br><br><br><br>

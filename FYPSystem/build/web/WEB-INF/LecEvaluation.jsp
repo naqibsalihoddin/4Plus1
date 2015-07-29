@@ -94,78 +94,77 @@ String roomNoProfile="";
     <body>
              
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px">
          <%@ include file="headerlecture.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
          
     
-    <div class="container">
-    <div style="height:auto" id="WrapperBody">
-        <br>
-
-        <br><center>
-            <form name="selectPSM">
-                    <%if(row>0){%>
-                    
-             <div style="width:50%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#000" class="panel-title"><b>Project Evaluation</h2>
-  </div>
-  <div class="panel-body alert-warning">       
-                    <table class="table" style="font-weight:bold">
-                        <tr>
-                            <td>Bachelor Project</td>
-                            <td>&emsp;</td>
-                            <td><select class="form-control" name="psmSelect" onchange="checkPsm(this.value)">
-                                    <option value="">Please Select</option>
-                                    <option value="psm1">Bachelor Project 1 (PSM1)</option>
-                                    <option value="psm2">Bachelor Project 2 (PSM2)</option>
-                                </select>
-                            </td>
-                        </tr>
-                       
-                        <tr>
-                            <td>Evaluation</td>
-                            <td>&emsp;</td>
-                            <td><select class="form-control" name="evSelect" onchange="checkEv(this.value)" disabled>
-                                    <option value="">Please Select</option>
-                                    <option value="pro">Project Proposal</option>
-                                    <option value="chairman">Chairman Evalution</option>
-                                    <option value="panel">Panel Evalution</option>
-                                </select>
-                            </td>
-                        </tr>
-                        
-                    </table>
-  </div></div>
-                    <%}else {%>
-                    <h2>Please click evaluation schedule to select free period before proceed.</h2>
-                    <%}%>
-                    </form>
-      
-                    </center>
         
-  
-                    <br><br><br><br><br>
-<div id="BodyContentStudent">
-    <span>
-    
-                   
-                </span>
-    
-    
-</div>
+			 <div style="height:auto" id="WrapperBody">
+				 <br>
 
-                
-        <div id="Left">
-        
-         <br>
-         <!--Main Menu-->
-    
-         <br>
-         </div>
-</div>
-</div>
+				 <br><center>
+				 <form name="selectPSM">
+					 <%if(row>0){%>
+
+						 <div style="width:50%" class="panel panel-default">
+							 <div class="panel-heading">
+								 <h2 style="color:#000" class="panel-title"><b>Project Evaluation</h2>
+									 </div>
+								 <div class="panel-body alert-warning">       
+									 <table class="table" style="font-weight:bold">
+										 <tr>
+											 <td>Bachelor Project</td>
+											 <td>&emsp;</td>
+											 <td><select class="form-control" name="psmSelect" onchange="checkPsm(this.value)">
+												 <option value="">Please Select</option>
+												 <option value="psm1">Bachelor Project 1 (PSM1)</option>
+												 <option value="psm2">Bachelor Project 2 (PSM2)</option>
+												 </select>
+											 </td>
+										 </tr>
+
+										 <tr>
+											 <td>Evaluation</td>
+											 <td>&emsp;</td>
+											 <td><select class="form-control" name="evSelect" onchange="checkEv(this.value)" disabled>
+												 <option value="">Please Select</option>
+												 <option value="pro">Project Proposal</option>
+												 <option value="chairman">Chairman Evalution</option>
+												 <option value="panel">Panel Evalution</option>
+												 </select>
+											 </td>
+										 </tr>
+
+									 </table>
+								 </div></div>
+							 <%}else {%>
+								 <h2>Please click evaluation schedule to select free period before proceed.</h2>
+								 <%}%>
+									 </form>
+
+								 </center>
+
+
+							 <br><br><br><br><br>
+							 <div id="BodyContentStudent">
+								 <span>
+
+
+								 </span>
+
+
+							 </div>
+
+
+							 <div id="Left">
+
+								 <br>
+								 <!--Main Menu-->
+
+								 <br>
+							 </div>
+						 </div>
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

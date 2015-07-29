@@ -8,7 +8,7 @@
           <div class="container">
           
       
- <nav class="navbar navbar-default" role="navigation">
+ <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -47,9 +47,9 @@
                                  
 			</ul>
                     <ul style="float:right;padding-top: 9px" class="nav navbar-nav">
-                        <li style="padding-top: 7px">Welcome Student, <%=Name%>&nbsp;</li>  
+                        <li style="padding-top: 7px; color:white;">Welcome Student, <%=Name%>&nbsp;</li>  
                       <li class="dropdown">
-					<button class="btn" onclick="location.href='./ServMenu?Page=Logout'">Logout&emsp;<i class="glyphicon glyphicon-log-out"></i></button>
+					<button class="btn btn-default btn-signout " onclick="location.href='./ServMenu?Page=Logout'">Logout&emsp;<i class="glyphicon glyphicon-log-out"></i></button>
 				</li>
                     </ul>
 		</div>

@@ -204,12 +204,12 @@ ArrayList freeTime = new ArrayList();
     <body>
                
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerlecture.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
          
     
-    <div class="container">
+    
     <div style="height:auto" id="WrapperBody">
         <br>
 
@@ -409,7 +409,7 @@ ArrayList freeTime = new ArrayList();
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

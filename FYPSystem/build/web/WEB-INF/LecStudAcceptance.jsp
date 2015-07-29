@@ -148,244 +148,246 @@ String selectedSemester = (String)request.getAttribute("semester");
 
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px">
          <%@ include file="headerlecture.jsp" %>
-
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
    
     <div class="container">
-    <div style="height:auto" id="WrapperBody">
-        <br>
-
-        <br><center>
-      
-                <span>
-                     
-                                <div style="width:50%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#000" class="panel-title">Select Student</h2>
-  </div>
-  <div class="panel-body alert-warning">
-                <form name="studentAcceptance"> 
-                    <table>
-                        <tr>
-                            <td><b>Bachelor Project</b></td>
-                            <td>&emsp;</td>
-                            <td><select class="form-control" name="psm" onchange="choosePSM(this.value)">
-                                    <option value="">Please Select</option>
-                                    <option value="psm_1" <%if(selectedPSM.equals("psm_1")){%> selected <%}%> >Bachelor Project 1 (PSM1)</option>
-                                    <option value="psm_2" <%if(selectedPSM.equals("psm_2")){%> selected <%}%> >Bachelor Project 2 (PSM2)</option>
-                                </select>
-                                <input type="hidden" name="selectPSM" value="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><b>Semester</b></td>
-                            <td>&emsp;</td>
-                            <td>
-                                <select class="form-control" name="semester" onchange="chooseSemester(this.value)" <%if(selectedPSM.equals("")){%> disabled<%}%>>
-                                    <option value="">Please Select</option>
-                                    <% for(int i=0;i<semester.size();i++){%>
-                                    <option value="<%=semester.get(i)%>" <%if(semester.get(i).equals(selectedSemester)){%> selected <%}%>><%=semester.get(i)%></option>
-                                    <%}%>
-                                </select>
-                                <input type="hidden" name="selectSemester" value="">
-                            </td>
-                        </tr>
-                    </table>
-  </div>
-            </div>
-                   <%if(((!selectedPSM.equals(""))&&(!selectedSemester.equals("")))){%>
-                    <table style="width:80%" class="table table-bordered table-hover">
-                        <tr bgcolor="#ebebeb" style="font-weight:bold" align="center">
-                             <td  width="20px">No.</td>   
-                             <td  width="250px">Student's Name</td>
-                             <td  width="80px">Metric No.</td>
-                             <td width="100">Status</td>
-                             <td width="150px" >Info</td>
-                             <td width="80px">Evaluation</td>
-                            
-                             
-                            
-                        </tr>
-                       
-                         <% 
-                            if(!(row == 0))
-                                {   for(int i=0;i<matricNo.size();i++)
-                                   {
-                                        
-                                        if(proStatus.get(i)==null)
-                                           {
-                                           proClass="hide";
-                                           psm1Class="hide";
-                                           scheme="hide";
-                                           
-                                           
-                                           }
-                                       else if(proStatus.get(i).equals("Pending"))
-                                           {
-                                            proURL="Images/Pproject";
-                                            proClass="show";
-                                            psm1Class="hide";
-                                            scheme="hide";
-                                            proColor="#FF0000";
-                                           
-                                           }
-                                       else if(!(proStatus.get(i).equals("Pending")))
-                                           {
-                                            proURL="Images/project";
-                                            proClass="show";
-                                            proColor="#000";
-                                            
-                                            }
-                                       if(appStatus.get(i)==null)
-                                           {
-                                                appClass="hide";
-                                           }
-                                       else if(appStatus.get(i).equals("Pending"))
-                                          {
-                                           appClass="show";
-                                           appURL="Images/PClipboard";
-                                           appColor="#FF0000";
-                                          }
-                                        else if(appStatus.get(i).equals("Approved"))
-                                          {
-                                            appClass="show";
-                                            appURL="Images/Clipboard";
-                                            appColor="#000";
-                                          }
-                                       if(svEvaluation.get(i)==null)
-                                           {
-                                            ev_psm1_URL = "Images/p_evaluate";
-                                            psm2Class="appHide";
-                                            
-                                           }
-                                        else
-                                            {
-                                                ev_psm1_URL = "Images/evaluate";
-                                            }
-                                        
-                                        if((!(svEvaluation_psm2.get(i)==null)&&(svEvaluation_psm2_1.get(i)==null)&&(svEvaluation_psm2_2.get(i)==null)))
-                                           { 
-                                                ev_psm2_URL = "Images/evaluate";
-                                           }
-                                        else{
-                                            ev_psm2_URL = "Images/p_evaluate";
-                                        }
-                                        if(color.equals("#ffe4e1"))
-                                            {
-                                                color = "#ffb6c1";
-                                                detailURL="Images/User2.jpg";
-                                                proURL=proURL+"2.jpg";
-                                                appURL=appURL+"2.jpg";
-                                                ev_psm1_URL= ev_psm1_URL+"2.jpg";
-                                                ev_psm2_URL= ev_psm2_URL+"2.jpg";
-                                            }
-                                         else
-                                            {  
-                                                 color = "#ffe4e1";
-                                                 detailURL="Images/User1.jpg";
-                                                 proURL=proURL+"1.jpg";
-                                                 appURL=appURL+"1.jpg";
-                                                 ev_psm1_URL= ev_psm1_URL+"1.jpg";
-                                                 ev_psm2_URL= ev_psm2_URL+"1.jpg";
-                                            }
-                                        String stat="";
-                                        String query="select flag_supervisor from evaluator where metricNo='"+String.valueOf(matricNo.get(i))+"'";
-                                        objDB.query(query);
-                                        stat=String.valueOf(objDB.getDataAt(0, "flag_supervisor"));
-                                        if(stat.equals("S")){
-                                            scheme="show";
-                                        }
-                                        else{
-                                            scheme="hide";
-                                        }
-                                        
-                                        
-                           %>
-                       <tr>
-                           <td ><%=i+1%></td>
-                           <td ><%=studName.get(i)%></td>
-                           <td ><%=matricNo.get(i)%></td>
-                           <td ><%=status.get(i)%></td>
-                           <td align="center"><span  onclick="viewStud('<%=matricNo.get(i)%>')" data-toggle="tooltip" title="View <%=studName.get(i)%> Details" data-placement="left"><i style="font-size:1.5em" class="fa fa-user"></i></span>
-                                                                 <span  class="<%=proClass%>" onclick="viewTitle('<%=matricNo.get(i)%>')"data-toggle="tooltip" title="Project Proposal : <%=proStatus.get(i)%>" data-placement="right" ><i style="color:<%=proColor%>;font-size:1.5em" class="fa fa-file-text"></i></span>
-                                                                 <span  class="<%=appClass%>" onclick="viewAppForm('<%=matricNo.get(i)%>')"data-toggle="tooltip" title="Application Status : <%=appStatus.get(i)%>" data-placement="right"><i style="color:<%=appColor%>;font-size:1.5em" class="fa fa-file-text-o"></i></span>
-                           </td>
-                           <%if(selectedPSM.equals("psm_1")){%>
-                           <td align="center"><span class="<%=psm1Class%>" onclick="evaluate_psm1('<%=matricNo.get(i)%>')"title="Evaluation PSM 1" alt="Evaluation PSM 1" ><i style="font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></span>&emsp;<span class="<%=scheme%>" ><span  class="btn btn-primary" onclick="submit('<%=matricNo.get(i)%>','<%=selectedSemester%>')">Submit</span></span></td>
-                           <%}else{%>
-                           <td align="center"><span onclick="evaluate_psm2('<%=matricNo.get(i)%>')"title="Evaluation PSM 2" alt="Evaluation PSM 2" ><i style="font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></span></td>
-                           <%}%>
-                        </tr>
-                            <%      }
-                              }
-                            else
-                                {%>
-                        <tr>
-                            <td colspan="6">There is no data selected from data base</td>
-                        </tr>
-                        <%      }%>
-                        <%}%>
-                        <input type="hidden" name="metric" value="">
-                        
-                        <td colspan="6">
-                                <%if(((!selectedPSM.equals(""))&&(!selectedSemester.equals("")))){%>
-                                 <table cellpadding="0px" cellspacing="0px">
-                                    <tr>
-                                        <td><i style="font-size:1.5em" class="fa fa-user"></i></td>
-                                        <td style="line-height:24px;">Student Details</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td><i style="font-size:1.5em" class="fa fa-file-text-o"></i></td>
-                                        <td style="line-height:24px;">Application (Done)</td>
-                                        <td><i style="color:#FF0000;font-size:1.5em" class="fa fa-file-text-o"></i></td>
-                                        <td style="line-height:24px;">Application (Pending/Rejected)</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td><i style="font-size:1.5em" class="fa fa-file-text"></i></td>
-                                        <td style="line-height:24px;">Project Status (Done)</td>
-                                        <td><i style="color:#FF0000;font-size:1.5em" class="fa fa-file-text"></i></td>
-                                        <td style="line-height:24px;">Project Status (Pending)</td>
-                                    </tr>
-                                    <tr>
-                                        <td><i style="font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></td>
-                                        <td style="line-height:24px;">Evaluation (Done)</td>
-                                        <td><i style="color:#FF0000;font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></td>
-                                        <td style="line-height:24px;">Evaluation (Pending)</td>
-                                    </tr>
-                                </table>
-                                <%}%>
-                            </td>
-                </table>
-                     </form>
-  
-        <br><br>
-<div id="BodyContentStudent">
-    <span>
-    
-                   
-                </span>
-    
     
 </div>
-
-                
-        <div id="Left">
         
-         <br>
-         <!--Main Menu-->
-    
-         <br>
-         </div>
-</div>
-</div>
+			 <div style="height:auto" id="WrapperBody">
+				 <br>
+
+				 <br><center>
+
+				 <span>
+
+					 <div style="width:50%" class="panel panel-default">
+						 <div class="panel-heading">
+							 <h2 style="color:#000" class="panel-title">Select Student</h2>
+						 </div>
+						 <div class="panel-body alert-warning">
+							 <form name="studentAcceptance"> 
+								 <table>
+									 <tr>
+										 <td><b>Bachelor Project</b></td>
+										 <td>&emsp;</td>
+										 <td><select class="form-control" name="psm" onchange="choosePSM(this.value)">
+											 <option value="">Please Select</option>
+											 <option value="psm_1" <%if(selectedPSM.equals("psm_1")){%> selected <%}%> >Bachelor Project 1 (PSM1)</option>
+											 <option value="psm_2" <%if(selectedPSM.equals("psm_2")){%> selected <%}%> >Bachelor Project 2 (PSM2)</option>
+											 </select>
+											 <input type="hidden" name="selectPSM" value="">
+										 </td>
+									 </tr>
+									 <tr>
+										 <td>
+											 <br>
+										 </td>
+									 </tr>
+									 <tr>
+										 <td><b>Semester</b></td>
+										 <td>&emsp;</td>
+										 <td>
+											 <select class="form-control" name="semester" onchange="chooseSemester(this.value)" <%if(selectedPSM.equals("")){%> disabled<%}%>>
+											 <option value="">Please Select</option>
+											 <% for(int i=0;i<semester.size();i++){%>
+											 <option value="<%=semester.get(i)%>" <%if(semester.get(i).equals(selectedSemester)){%> selected <%}%>><%=semester.get(i)%></option>
+											 <%}%>
+												 </select>
+											 <input type="hidden" name="selectSemester" value="">
+											 </td>
+											 </tr>
+								 </table>
+									 </div>
+								 </div>
+							 <%if(((!selectedPSM.equals(""))&&(!selectedSemester.equals("")))){%>
+								 <table style="width:80%" class="table table-bordered table-hover">
+									 <tr bgcolor="#ebebeb" style="font-weight:bold" align="center">
+										 <td  width="20px">No.</td>   
+										 <td  width="250px">Student's Name</td>
+										 <td  width="80px">Metric No.</td>
+										 <td width="100">Status</td>
+										 <td width="150px" >Info</td>
+										 <td width="80px">Evaluation</td>
+
+
+
+									 </tr>
+
+									 <% 
+										if(!(row == 0))
+										{   for(int i=0;i<matricNo.size();i++)
+									 {
+
+									 if(proStatus.get(i)==null)
+									 {
+									 proClass="hide";
+									 psm1Class="hide";
+									 scheme="hide";
+
+
+									 }
+									 else if(proStatus.get(i).equals("Pending"))
+									 {
+									 proURL="Images/Pproject";
+									 proClass="show";
+									 psm1Class="hide";
+									 scheme="hide";
+									 proColor="#FF0000";
+
+									 }
+									 else if(!(proStatus.get(i).equals("Pending")))
+									 {
+									 proURL="Images/project";
+									 proClass="show";
+									 proColor="#000";
+
+									 }
+									 if(appStatus.get(i)==null)
+									 {
+									 appClass="hide";
+									 }
+									 else if(appStatus.get(i).equals("Pending"))
+									 {
+									 appClass="show";
+									 appURL="Images/PClipboard";
+									 appColor="#FF0000";
+									 }
+									 else if(appStatus.get(i).equals("Approved"))
+									 {
+									 appClass="show";
+									 appURL="Images/Clipboard";
+									 appColor="#000";
+									 }
+									 if(svEvaluation.get(i)==null)
+									 {
+									 ev_psm1_URL = "Images/p_evaluate";
+									 psm2Class="appHide";
+
+									 }
+									 else
+									 {
+									 ev_psm1_URL = "Images/evaluate";
+									 }
+
+									 if((!(svEvaluation_psm2.get(i)==null)&&(svEvaluation_psm2_1.get(i)==null)&&(svEvaluation_psm2_2.get(i)==null)))
+									 { 
+									 ev_psm2_URL = "Images/evaluate";
+									 }
+									 else{
+									 ev_psm2_URL = "Images/p_evaluate";
+									 }
+									 if(color.equals("#ffe4e1"))
+									 {
+									 color = "#ffb6c1";
+									 detailURL="Images/User2.jpg";
+									 proURL=proURL+"2.jpg";
+									 appURL=appURL+"2.jpg";
+									 ev_psm1_URL= ev_psm1_URL+"2.jpg";
+									 ev_psm2_URL= ev_psm2_URL+"2.jpg";
+									 }
+									 else
+									 {  
+									 color = "#ffe4e1";
+									 detailURL="Images/User1.jpg";
+									 proURL=proURL+"1.jpg";
+									 appURL=appURL+"1.jpg";
+									 ev_psm1_URL= ev_psm1_URL+"1.jpg";
+									 ev_psm2_URL= ev_psm2_URL+"1.jpg";
+									 }
+									 String stat="";
+									 String query="select flag_supervisor from evaluator where metricNo='"+String.valueOf(matricNo.get(i))+"'";
+									 objDB.query(query);
+									 stat=String.valueOf(objDB.getDataAt(0, "flag_supervisor"));
+									 if(stat.equals("S")){
+									 scheme="show";
+									 }
+									 else{
+									 scheme="hide";
+									 }
+
+
+									 %>
+									 <tr>
+										 <td ><%=i+1%></td>
+										 <td ><%=studName.get(i)%></td>
+										 <td ><%=matricNo.get(i)%></td>
+										 <td ><%=status.get(i)%></td>
+										 <td align="center"><span  onclick="viewStud('<%=matricNo.get(i)%>')" data-toggle="tooltip" title="View <%=studName.get(i)%> Details" data-placement="left"><i style="font-size:1.5em" class="fa fa-user"></i></span>
+											 <span  class="<%=proClass%>" onclick="viewTitle('<%=matricNo.get(i)%>')"data-toggle="tooltip" title="Project Proposal : <%=proStatus.get(i)%>" data-placement="right" ><i style="color:<%=proColor%>;font-size:1.5em" class="fa fa-file-text"></i></span>
+											 <span  class="<%=appClass%>" onclick="viewAppForm('<%=matricNo.get(i)%>')"data-toggle="tooltip" title="Application Status : <%=appStatus.get(i)%>" data-placement="right"><i style="color:<%=appColor%>;font-size:1.5em" class="fa fa-file-text-o"></i></span>
+										 </td>
+										 <%if(selectedPSM.equals("psm_1")){%>
+											 <td align="center"><span class="<%=psm1Class%>" onclick="evaluate_psm1('<%=matricNo.get(i)%>')"title="Evaluation PSM 1" alt="Evaluation PSM 1" ><i style="font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></span>&emsp;<span class="<%=scheme%>" ><span  class="btn btn-primary" onclick="submit('<%=matricNo.get(i)%>','<%=selectedSemester%>')">Submit</span></span></td>
+											 <%}else{%>
+												 <td align="center"><span onclick="evaluate_psm2('<%=matricNo.get(i)%>')"title="Evaluation PSM 2" alt="Evaluation PSM 2" ><i style="font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></span></td>
+												 <%}%>
+													 </tr>
+												 <%      }
+													}
+													else
+													{%>
+													 <tr>
+														 <td colspan="6">There is no data selected from data base</td>
+													 </tr>
+													 <%      }%>
+														 <%}%>
+															 <input type="hidden" name="metric" value="">
+
+															 <td colspan="6">
+																 <%if(((!selectedPSM.equals(""))&&(!selectedSemester.equals("")))){%>
+																	 <table cellpadding="0px" cellspacing="0px">
+																		 <tr>
+																			 <td><i style="font-size:1.5em" class="fa fa-user"></i></td>
+																			 <td style="line-height:24px;">Student Details</td>
+																		 </tr>
+
+																		 <tr>
+																			 <td><i style="font-size:1.5em" class="fa fa-file-text-o"></i></td>
+																			 <td style="line-height:24px;">Application (Done)</td>
+																			 <td><i style="color:#FF0000;font-size:1.5em" class="fa fa-file-text-o"></i></td>
+																			 <td style="line-height:24px;">Application (Pending/Rejected)</td>
+																		 </tr>
+
+																		 <tr>
+																			 <td><i style="font-size:1.5em" class="fa fa-file-text"></i></td>
+																			 <td style="line-height:24px;">Project Status (Done)</td>
+																			 <td><i style="color:#FF0000;font-size:1.5em" class="fa fa-file-text"></i></td>
+																			 <td style="line-height:24px;">Project Status (Pending)</td>
+																		 </tr>
+																		 <tr>
+																			 <td><i style="font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></td>
+																			 <td style="line-height:24px;">Evaluation (Done)</td>
+																			 <td><i style="color:#FF0000;font-size:1.5em" class="glyphicon glyphicon-list-alt"></i></td>
+																			 <td style="line-height:24px;">Evaluation (Pending)</td>
+																		 </tr>
+																	 </table>
+																	 <%}%>
+																		 </td>
+																	 </table>
+															 </form>
+
+														 <br><br>
+														 <div id="BodyContentStudent">
+															 <span>
+
+
+															 </span>
+
+
+														 </div>
+
+
+														 <div id="Left">
+
+															 <br>
+															 <!--Main Menu-->
+
+															 <br>
+														 </div>
+														 </div>
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

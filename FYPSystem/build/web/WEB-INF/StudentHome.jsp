@@ -165,11 +165,12 @@ var slmg=new Array();
     <body onload="vsscrollstart();">
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerstudent.jsp" %>
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
 
     
-    <div class="container">
+    
     <div id="WrapperBody">
 <div id="BodyContentStudent">
     <span>
@@ -195,7 +196,7 @@ var slmg=new Array();
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

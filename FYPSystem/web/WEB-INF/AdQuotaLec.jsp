@@ -111,11 +111,12 @@ if ((!(UserSession==null))&&(UserType.equals("3"))) {
   
     <body>
                  
-        <div id="Wrapper">
+        <div id="Wrapper" style="padding-top:50px;">
          
          <%@ include file="headeradmin.jsp" %>
-           
-    <div class="container">
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
+    
     <div style="height:auto" id="WrapperBody">
         
 
@@ -390,7 +391,7 @@ if ((!(UserSession==null))&&(UserType.equals("3"))) {
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
         

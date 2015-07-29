@@ -132,10 +132,9 @@ var slmg=new Array();
     <body onload="vsscrollstart();">
                
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headeradmin.jsp" %>
-            <br>
-            <br>
+            
              <img src="Images/headerbg3.png" alt="" class="home-img">
          
     

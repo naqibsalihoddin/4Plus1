@@ -103,7 +103,8 @@ String Name = (String)session.getAttribute("name");
         <link rel="stylesheet" type="text/css" href="css/table.css">
         <link rel="stylesheet" type="text/css" href="css/button.css"> 
         <link rel="stylesheet" type="text/css" href="css/titleSuggestion.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script src="js/jquery.min.js"></script>
         
 
@@ -116,27 +117,27 @@ String Name = (String)session.getAttribute("name");
         <title>Final Year Project Management System</title>
     </head>
     
-  
+ 
     <body>
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerlecture.jsp" %>
 
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
     
-    <div class="container">
     <div style="height:auto" id="WrapperBody">
         <br>
 
       <br>
       
-        <table style="margin:auto;width:70%;" border="1"id="expertise" class="table table-bordered table-hover alert-warning">
+        <table style="margin:auto;width:70%;" border="1"id="expertise" class="table table-bordered ">
                     <form name="editExpertise">
-                        <tr style="font-weight:bold;color:#000" align="center">
-                            <td bgcolor="whitesmoke" width="550px">Expertise Field</td>
+						<tr style="background: #FCF5CA;font-weight:bold;color:#740F2D" align="center">
+                            <td  width="550px">Expertise Field</td>
                            
-                             <td bgcolor="whitesmoke" width="50">Edit</td>
-                             <td bgcolor="whitesmoke" width="50">Delete</td>
+                             <td width="50">Edit</td>
+                             <td width="50">Delete</td>
                             
                         </tr>
                        
@@ -182,7 +183,7 @@ String Name = (String)session.getAttribute("name");
                               }
                             else
                                 {%>
-                        <tr>
+                        <tr style="background:white;">
                             <td colspan="3">There is no data selected from data base</td>
                         </tr>
                         <%      }%>
@@ -199,10 +200,10 @@ String Name = (String)session.getAttribute("name");
                                 <br style="line-height:5px">
                                 <br>
                                     <fieldset id="titleSuggestion">
-                                        <legend style="color:grey">Add Expertised Field</legend>
+										<legend style="color:#FCF5CA">Add Expertised Field</legend>
                                             <table>
                                                  <tr>
-                                                    <td id="text">Expertise Field</td>
+                                                    <td class="desc-text">Expertise Field</td>
                                                     <td id="colon">:</td>
                                                     <td colspan="2" align="left">
                                                         <select class="form-control" name="addProField" id="inputText">
@@ -217,7 +218,7 @@ String Name = (String)session.getAttribute("name");
                                                  </tr>
                                                  
                                                  <tr>
-                                                     <td id="text">Decription</td>
+                                                     <td class="desc-text">Decription</td>
                                                      <td id="colon">:</td>
                                                      <td colspan="2"><textarea class="form-control" col="110" rows="5" id="inputText" name="addDescription"></textarea></td>
                                                  </tr>
@@ -251,14 +252,14 @@ String Name = (String)session.getAttribute("name");
                                         <legend>Edit Expertised Field</legend>
                                             <table>
                                                  <tr>
-                                                    <td id="text">Expertise Field</td>
+                                                    <td class="desc-text">Expertise Field</td>
                                                     <td id="colon">:</td>
                                                     <td><%=editProField%></td>
                                                             
                                                  </tr>
                                                  
                                                  <tr>
-                                                     <td id="text">Decription</td>
+                                                     <td class="desc-text">Decription</td>
                                                      <td id="colon">:</td>
                                                      
                                                      <td colspan="2"><textarea  class="form-control" col="110" rows="5" id="inputText" name="editDescription"><%=editDescription%></textarea></td>
@@ -300,7 +301,7 @@ String Name = (String)session.getAttribute("name");
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

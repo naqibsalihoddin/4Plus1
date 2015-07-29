@@ -53,7 +53,7 @@ DB objDB = new DB();
                  "inner join lecturer c on c.staffNo=a.ev2 "+
                  "where a.semester='"+Semester.getSemester()+"'");
      row = objDB.getNumberOfRows();
-     for(int i=0;i<row;i++)
+     for(int i=0 ;i< row; i++)
          {
              ev_slot.add(objDB.getDataAt(i, "slot"));
              room.add(objDB.getDataAt(i, "room"));
@@ -138,12 +138,13 @@ DB objDB = new DB();
     </script>
     <body>
           
-        <div id="Wrapper">
+        <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headeradmin.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
          
     
-    <div class="container">
+   
     <div style="height:auto" id="WrapperBody">
         <br><center>
             <%if(!evaluateWithoutSchedule.equals("hide")){%>
@@ -174,11 +175,11 @@ DB objDB = new DB();
                                 <td>&emsp;</td>
                                 <td><select class="form-control" name="day" disabled onchange="selectRoomDay()">
                                         <option value="">Please Select</option>selectRoomDay
-                                        <option value="1">Monday</option>
-                                        <option value="2">Tuesday</option>
-                                        <option value="3">Wednesday</option>
-                                        <option value="4">Thursday</option>
-                                        <option value="5">Friday</option>
+                                        <option value="1">Sunday</option>
+                                        <option value="2">Monday</option>
+                                        <option value="3">Tuesday</option>
+                                        <option value="4">Wednesday</option>
+                                        <option value="5">Thursday</option>
                                     </select>
                                 </td>
                             </tr>
@@ -404,7 +405,7 @@ DB objDB = new DB();
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

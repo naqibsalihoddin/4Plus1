@@ -113,11 +113,11 @@ int q_row=0;
                         </tr>
                         <tr>
                             <td style="width:75px;">&nbsp;</td>
+                            <td style="width:170px;" id="adTitle">Sunday</td>
                             <td style="width:170px;" id="adTitle">Monday</td>
                             <td style="width:170px;" id="adTitle">Tuesday</td>
                             <td style="width:170px;" id="adTitle">Wednesday</td>
                             <td style="width:170px;" id="adTitle">Thursday</td>
-                            <td style="width:170px;" id="adTitle">Friday</td>
                         </tr>
                         
                         <%

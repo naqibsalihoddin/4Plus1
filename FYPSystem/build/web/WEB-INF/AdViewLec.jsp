@@ -65,9 +65,10 @@ String Name = (String)session.getAttribute("name");
         <title>Final Year Project Management System</title>
     </head>
    <body>
-     <div id="Wrapper">
+     <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headeradmin.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
          
     
    

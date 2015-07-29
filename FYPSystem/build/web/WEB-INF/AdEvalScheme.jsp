@@ -266,12 +266,13 @@ String selectedSemester = (String)request.getAttribute("semester");
     
     <body>
         
-        <div id="Wrapper">
+        <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headeradmin.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
          
     
-    <div class="container">
+    
     <div style="height:auto" id="WrapperBody">
        
         <form name="evalScheme">
@@ -602,7 +603,7 @@ String selectedSemester = (String)request.getAttribute("semester");
         
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
            

@@ -166,10 +166,11 @@ int fieldRow = 0;
       
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px">
          <%@ include file="headerstudent.jsp" %>
 
-    <div class="container">
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
     <div style="height:auto" id="WrapperBody">
         
    
@@ -407,7 +408,7 @@ int fieldRow = 0;
          </div>
                 <br><br><br><br><br>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

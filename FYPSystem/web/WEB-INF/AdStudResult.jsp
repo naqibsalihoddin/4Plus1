@@ -185,11 +185,13 @@ int row = -1;
   
     <body>
              
-        <div id="Wrapper">
+        <div id="Wrapper" style="padding-top:50px;">
          
          <%@ include file="headeradmin.jsp" %>
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
          <form>   
-    <div class="container">
+   
     <div style="height:auto" id="WrapperBody">
         <br>
 
@@ -339,7 +341,7 @@ int row = -1;
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
      </form>     
