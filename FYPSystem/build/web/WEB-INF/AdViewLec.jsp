@@ -78,15 +78,16 @@ String Name = (String)session.getAttribute("name");
             <span>
                
                 
-                <h2>List Of Lecturer</h2>
+				
                 <div style="width:80%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#fff" class="panel-title"></h2>
+					<div class="panel-heading" style="background: #FCF5CA;">
+						<h2 style="font-weight:bold ; color:#740F2D;">List Of Lecturer</h2>
+	 
   </div>
-  <div class="panel-body alert-warning">
+  <div class="panel-body alert-warning" style="background:white;">
       <a style="" class="btn btn-success" href="./ServMenu?Page=AdRegisterLec">&emsp;&emsp;&emsp;&emsp;Add&emsp;&emsp;&emsp;&emsp;</a>
       <br> <span>
-                    <table class="table table-hover" id="expertise" style="width:100%">
+                    <table class="table table-hover" id="expertise" style="padding-top:10px;width:100% ;background:white;">
                     <form>
                         <tr style="font-weight:bold" align="center">
                              <td  width="20px">No.</td>   
