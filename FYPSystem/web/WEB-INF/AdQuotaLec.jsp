@@ -122,11 +122,11 @@ if ((!(UserSession==null))&&(UserType.equals("3"))) {
 
         <br><center>
             <form name="quotaLec">
-                    <h2>Quota of Lecturer</h2>
+                    <h2 style="font-weight:bold; color:#fcf5ca;">Quota of Lecturer</h2>
                        <center>
-                           <table class="table table-bordered table-hover">
+                           <table class="table table-bordered " style="background: white;">
                                
-                               <tr bgcolor="#ebebeb"  style="font-weight:bold" align="center"  >
+                               <tr bgcolor="#fcf5ca"  style="font-weight:bold ; color:#740f2d;" align="center"  >
                                    <td>Semester</td>
                                  <td>Supervision</td>
                                  
@@ -227,12 +227,9 @@ if ((!(UserSession==null))&&(UserType.equals("3"))) {
                          <tr id="itemAdd" class="<%=itemAdd%>">
                                 
                              <td colspan="8">
-                                <br>
-                                <br>
-                                 
-                                    <table class="table table-bordered" style="width:100%">
-                                        <tr align="center" bgcolor="#ebebeb">
-                                            <td colspan="4"><b>Add Quota</td>
+                               <table class="table table-bordered" style="width:100% ;background:white;">
+                                        <tr align="center" bgcolor="#fcf5ca">
+                                            <td colspan="4"><b style="font-weight:bold; color:#740f2d;">Add Quota</td>
                                         </tr>
                                             <tr>
                                                 <td>Semester</td>

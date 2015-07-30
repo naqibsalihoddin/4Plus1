@@ -200,7 +200,7 @@ DB objDB = new DB();
 			 <img src="Images/headerbg3.png" alt="" class="home-img">
 
 
-    <div class="container">
+    
     <div style="height:auto" id="WrapperBody">
         
    <center>
@@ -374,7 +374,7 @@ DB objDB = new DB();
          </div>
                 <br><br><br>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

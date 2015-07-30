@@ -216,16 +216,16 @@ ArrayList freeTime = new ArrayList();
         <br><center>
            <form name="lecTT">
                     <% if(show.equals("Yes")){ %>
-                    <h2>Please Click for free time.</h2>
+						<h2 style="font-weight:bold; color: #FCF5CA">Please Click for free time.</h2>
                     <table style="width:90%" class="timetable table table-bordered table-hover" >
                        
                        <tr>
-                            <td style="background-color:whitesmoke; width:130px;"></td>
-                            <td style="background-color:whitesmoke; width:100px;">Monday</td>
-                            <td style="background-color:whitesmoke; width:100px;">Tuesday</td>
-                            <td style="background-color:whitesmoke; width:100px;">Wednesday</td>
-                            <td style="background-color:whitesmoke; width:100px;">Thursday</td>
-                            <td style="background-color:whitesmoke; width:100px;">Friday</td>
+                            <td style="background-color:white; width:130px;"></td>
+                            <td style="background-color:white; width:100px;">Sunday</td>
+                            <td style="background-color:white; width:100px;">Monday</td>
+                            <td style="background-color:white; width:100px;">Tuesday</td>
+                            <td style="background-color:white; width:100px;">Wednesday</td>
+                            <td style="background-color:white; width:100px;">Thursday</td>
                        </tr>
                        <%
                          
@@ -261,7 +261,7 @@ ArrayList freeTime = new ArrayList();
                                       else if(i==12)
                                           time="7.00 pm";
                                  %>
-                                    <td style="background-color:whitesmoke;"><%=time%></td>
+                                    <td style="background-color:white;"><%=time%></td>
                                 <%} else{
                                         
                                         if(row==0){
@@ -293,8 +293,8 @@ ArrayList freeTime = new ArrayList();
                        
                         <table>
                             <tr>
-                                <td width="50px"style="background-color:#ff92b6;"></td><td class="desc">Busy</td>
-                                <td width="50px"style="background-color:#66FF66;"></td><td class="desc">Free Time</td>
+								<td width="50px"style="background-color:red; "></td><td class="desc" style="color: #FCF5CA;">Busy</td>
+								<td width="50px"style="background-color:#66FF66; "></td><td class="desc" style="color: #FCF5CA;">Free Time</td>
                             </tr>
                         </table>
                         <table>

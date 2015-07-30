@@ -141,12 +141,12 @@ DB objDB = new DB();
                         <h2></h2>
                         <center>
                             <div style="width:50%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#000" class="panel-title"><b>Assign Evaluator PSM 2</h2>
+								<div class="panel-heading" style="background:#FCF5CA">
+      <h2 style="color:#740f2d" class="panel-title"><b>Assign Evaluator PSM 2</h2>
   </div>
-  <div class="panel-body alert-warning">
+  <div class="panel-body">
                         <table>
-                            <tr style="font-weight:bold">
+                            <tr style="font-weight:bold ; color:#740f2d;">
                                 
                                 <td>Room</td>
                                 <td>&emsp;</td>
@@ -159,7 +159,7 @@ DB objDB = new DB();
                                 </td>
                             </tr>
                             <tr><td><br></td></tr>
-                            <tr style="font-weight:bold">
+							<tr style="font-weight:bold ;color: #740f2d;">
                                 
                                 <td>Day</td>
                                 <td>&emsp;</td>
@@ -181,18 +181,18 @@ DB objDB = new DB();
                                     
                                     for(int c=1;c<6;c++){
                                         if(c==1)
-                                          day="Monday";
+                                          day="Sunday";
                                         else if(c==2)
-                                          day="Tuesday";
+                                          day="Monday";
                                         else if(c==3)
-                                          day="Wednesday";
+                                          day="Tuesday";
                                         else if(c==4)
-                                          day="Thursday";
+                                          day="Wednesday";
                                         else if(c==5)
-                                          day="Friday";   
+                                          day="Thursday";   
                                            %>
                                 <table class="Hide" id="day<%=c%>_<%=roomID.get(numOfRoom)%>">
-                                    <tr><td  colspan="4" style="font-weight:bold">Day : <%=day%> &nbsp;  Room: <%=roomName.get(numOfRoom)%></td>
+                                    <tr><td  colspan="4" style="font-weight:bold; color: #fcf5ca;">Day : <%=day%> &nbsp;  Room: <%=roomName.get(numOfRoom)%></td>
                                     </tr>
                                     <tr bgcolor="#ebebeb" style="font-weight:bold" align="center">
                                         <td style="width:70px">Time</td>

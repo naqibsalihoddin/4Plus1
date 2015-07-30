@@ -75,10 +75,10 @@ String Name = (String)session.getAttribute("name");
         
 
         <center>
-            <h2>News</h2>
+            <h2 style="font-weight: bold; color:#fcf5ca;">News</h2>
           
-        <table  style="width: 70%" class="table table-bordered table-hover">
-            <tr bgcolor="#ebebeb">
+        <table  style="width: 70%; background:white;" class="table table-bordered">
+            <tr bgcolor="#fcf5ca">
                 <td>Id</td>
                 <td>Title</td>
                 <td>Content</td>
@@ -103,7 +103,7 @@ String Name = (String)session.getAttribute("name");
         <br><br>
               <form>
         <table id="tableadd" class="table table-bordered hide"  style="width:40%">
-            <tr bgcolor="#ebebeb">
+            <tr bgcolor="#fcf5ca">
                 <td colspan="2" align="center"><b>Add News</td>
             </tr>
             <tr>

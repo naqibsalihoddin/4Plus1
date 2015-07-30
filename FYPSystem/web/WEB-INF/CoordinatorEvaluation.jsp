@@ -103,11 +103,11 @@ String Name = (String)session.getAttribute("name");
              <form>
     
                     <div style="width:600px" class="panel panel-default">
-  <div class="panel-heading" style="background-color: #5BC0DE">
-      <h3 style="color:#fff" class="panel-title"><b>Project Evaluation</b></h3>
+						<div class="panel-heading" style="background-color: #FCF5CA">
+							<h3 style="color:#740F2D" class="panel-title"><b>Project Evaluation</b></h3>
   </div>
-  <div class="panel-body alert-warning">
-                    <table id="expertise" style="font-weight:bold" style="width:100%">
+  <div class="panel-body ">
+	  <table id="expertise" style="font-weight:bold; width:100%; color:#740F2D;">
                         <tr>
                             <td>Bachelor Project</td>
                             <td width="5px"></td>

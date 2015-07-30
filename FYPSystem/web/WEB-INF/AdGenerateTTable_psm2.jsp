@@ -123,11 +123,11 @@ int q_row=0;
                     <center>
                     <div>
                        <div style="width:50%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#000" class="panel-title"><b>Assign Chairman and Panel PSM 2</h2>
+						   <div class="panel-heading" style="background:#FCF5CA ;">
+							   <h2 style="color:#740F2D" class="panel-title"><b>Assign Chairman and Panel PSM 2</h2>
   </div>
-  <div class="panel-body alert-warning">
-                       <b>Presentation Room&emsp;
+  <div class="panel-body ">
+	  <b style="color:#740F2D;">Presentation Room&emsp;
                             <select name="demoRoom" onchange="showTable('generate')">
                                     <option value="">Please Select</option>
                                     <% for(int i=0;i<room_row;i++){%>
@@ -144,7 +144,7 @@ int q_row=0;
                     
                     <table style="padding-left: 100px" id="adTimetable" class="hide" name="roomTable">
                         <tr>
-                            <td colspan="6"><h2>Room:<%=room.get(num_room)%></h2></td>
+							<td colspan="6"><h2 style="font-weight:bold; color: #FCF5CA;" >Room:<%=room.get(num_room)%></h2></td>
                         </tr>
                         <tr>
                             <td style="width:75px;">&nbsp;</td>

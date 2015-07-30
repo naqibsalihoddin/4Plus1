@@ -132,11 +132,11 @@ int rowQuota =0;
         
 
         <br><center>
-           <form>
+           <form style="backgroung:white;">
                         <%if(rowQuota>0){%>
-                        <h2>Evaluator of Project Proposal</h2>
-                        <table style="width:80%" class="table table-bordered table-hover">
-                            <tr bgcolor="#ebebeb"style="font-weight:bold" align="center">
+                        <h2 style="font-weight:bold; color:#fcf5ca;">Evaluator of Project Proposal</h2>
+                        <table style="width:80%" class="table table-bordered">
+                            <tr bgcolor="#fcf5ca"style="font-weight:bold; color:#740f2d;" align="center">
                                 <td>Student Name</td>
                                 <td>Project Title</td>
                                 <td>Project Type</td>
@@ -151,7 +151,7 @@ int rowQuota =0;
                                      
                             %>
 
-                             <tr>   
+                             <tr style="background:white; color:black;">   
                                 <td><FONT COLOR="Cornflower Blue">(<%=(i+1)%>)&nbsp;<%=studName.get(i)%></FONT><BR></td><td><%=title.get(i)%></td>
                                 <td><%=field.get(i)%></td>
                                 <td><%=evName.get(i)%></td>

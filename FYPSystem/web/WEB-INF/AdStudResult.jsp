@@ -197,13 +197,13 @@ int row = -1;
 
         <br><center>
       <div style="width:50%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#000" class="panel-title">Student Grade</h2>
+  <div class="panel-heading" style="background: #fcf5ca;">
+      <h2 style="color:#740f2d; font-weight:bold;" class="panel-title">Student Grade</h2>
   </div>
-  <div class="panel-body alert-warning">
+  <div class="panel-body ">
                 <span>
-                    <table>
-                        <tr>
+					<table style="color:#740f2d;">
+                        <tr >
                             <td><b>Bachelor Project</b></td>
                             <td>&nbsp;</td>
                             <td>
@@ -256,7 +256,7 @@ int row = -1;
                             
                         
                         %>
-                        <tr bgcolor="#fcf8e3">
+                        <tr bgcolor="white">
                             <td><%=i+1%></td>
                             <td><%=studName.get(i)%></td>
                             <td><%=cmMarks.get(i)%></td>
@@ -284,18 +284,18 @@ int row = -1;
                     </table>
                     <%}else if(selectedPSM.equals("psm_2")){%>
                      <table>
-                         <tr style="font-weight:bold" align="center">
-                             <td rowspan="2" bgcolor="#fa8072" width="20px">No.</td>   
-                             <td rowspan="2" bgcolor="#fa8072" width="250px">Name</td>
-                             <td bgcolor="#fa8072" colspan="5">Evaluation Marks</td>
-                             <td rowspan="2" bgcolor="#fa8072">Grade</td>
+						 <tr style="background:#fcf5ca;font-weight:bold; color: #740f2d;" align="center">
+                             <td rowspan="2"  width="20px">No.</td>   
+                             <td rowspan="2"  width="250px">Name</td>
+                             <td  colspan="5">Evaluation Marks</td>
+                             <td rowspan="2" >Grade</td>
                          </tr>
-                        <tr style="font-weight:bold" align="center">
-                             <td bgcolor="#fa8072" width="50px">Chairman</td>
-                             <td bgcolor="#fa8072" width="50px">Panel</td>
-                             <td bgcolor="#fa8072" width="60px">Phase 1</td>
-                             <td bgcolor="#fa8072" width="60px">Phase 2</td>
-                             <td bgcolor="#fa8072" width="50px">Supervisor</td>
+                        <tr style="background:#fcf5ca;font-weight:bold; color: #740f2d;" align="center">
+                             <td width="50px">Chairman</td>
+                             <td  width="50px">Panel</td>
+                             <td width="60px">Phase 1</td>
+                             <td  width="60px">Phase 2</td>
+                             <td  width="50px">Supervisor</td>
                         </tr>
                         <%
                         if(row>0){

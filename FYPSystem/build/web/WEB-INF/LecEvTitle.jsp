@@ -107,13 +107,13 @@ String lectNameProfile="";
   
     <body>
            
-        <div id="Wrapper">
+        <div id="Wrapper" style="padding-top:50px">
             <% if (UserType.equals("2")) {%>
          <%@ include file="headerlecture.jsp" %>
          <%} else if (UserType.equals("3")){%> 
          <%@ include file="headeradmin.jsp" %>
          <% } %>  
-    <div class="container">
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
     <div style="height:auto" id="WrapperBody">
         <br>
 
@@ -121,13 +121,13 @@ String lectNameProfile="";
             
                 <span>
                      <div style="width:70%" class="panel panel-default">
-                    <div class="panel-heading" style="background-color: #5BC0DE">
-      <h3 style="color:#fff" class="panel-title"><b>Project Proposal Evaluation</b></h3>
+						 <div class="panel-heading" style="background-color: #FCF5CA">
+							 <h3 style="font-weight:bold; color:#740F2D" class="panel-title"><b>Project Proposal Evaluation</b></h3>
   </div>
-  <div class="panel-body alert-warning">
+  <div class="panel-body alert-warning" style="background:white;">
                     <table class="table table-bordered">
                     <form name="studentAcceptance">
-                        <tr bgcolor="#fff" style="font-weight:bold;color:#000" align="center">
+						<tr bgcolor="#fff" style="font-weight:bold;color:#740F2D" align="center">
                              <td width="20px">No.</td>   
                              <td  width="200px">Student's Name</td>
                              <td  width="250px">Project Title</td>
@@ -231,7 +231,7 @@ String lectNameProfile="";
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

@@ -152,12 +152,12 @@ DB objDB = new DB();
                         <h2></h2>
                         <center>
                             <div style="width:50%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#000" class="panel-title"><b>Assign Evaluator PSM 1</h2>
+								<div class="panel-heading" style="background:#FCF5CA">
+	  <h2 style="color:#740F2D" class="panel-title"><b>Assign Evaluator PSM 1</h2>
   </div>
-  <div class="panel-body alert-warning">
+  <div class="panel-body ">
                         <table>
-                            <tr style="font-weight:bold" align="center">
+							<tr style="font-weight:bold; background:#FCF5CA;" align="center">
                                 
                                 <td>Room</td>
                                 <td>&emsp;</td>

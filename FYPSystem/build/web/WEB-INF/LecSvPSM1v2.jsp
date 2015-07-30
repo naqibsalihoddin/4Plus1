@@ -203,12 +203,13 @@ String queryProfile ="Select* from lecturer where staffNo='"+UserSession+"'";
     <body>
             
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerlecture.jsp" %>
-        
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
+
          
     
-    <div class="container">
+
     <div style="height:auto" id="WrapperBody">
          <span style="position:absolute;top:180px;left:130px"  onclick="javascript:history.back()"><i style="font-size:2.5em;color:#f0ad4e" class="fa fa-arrow-circle-left"></i></span> 
      <br> 
@@ -441,7 +442,7 @@ String queryProfile ="Select* from lecturer where staffNo='"+UserSession+"'";
          <br>
          </div>
 </div>
-</div>
+
          <br><br><br>
          <%@ include file="Footer.jsp" %>
          

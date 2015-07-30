@@ -52,11 +52,11 @@ String flag ="";
             <form>
                 <span>
                     <div style="width:50%" class="panel panel-default">
-  <div class="panel-heading">
-      <h2 style="color:#000" class="panel-title"><b>Show Evaluation Schedule</h2>
+  <div class="panel-heading" style="background:#fcf5ca">
+      <h2 style="color:#740f2d" class="panel-title"><b>Show Evaluation Schedule</h2>
   </div>
-  <div class="panel-body alert-warning">
-                    <table style="font-weight:bold">
+  <div class="panel-body ">
+                    <table style="color:black;font-weight:bold">
                         <tr>
                             <td>Show Evaluation Schedule of lecturer / student :</td>
                             <td><select class="form-control" name="showEv" onchange="showSchedule(this.value)">

@@ -108,11 +108,11 @@ String roomNoProfile="";
 					 <%if(row>0){%>
 
 						 <div style="width:50%" class="panel panel-default">
-							 <div class="panel-heading">
-								 <h2 style="color:#000" class="panel-title"><b>Project Evaluation</h2>
+							 <div class="panel-heading" style="background:#FCF5CA;">
+								 <h2 style="color:#740F2D ;font-weight:bold;" class="panel-title"><b>Project Evaluation</h2>
 									 </div>
-								 <div class="panel-body alert-warning">       
-									 <table class="table" style="font-weight:bold">
+								 <div class="panel-body alert-warning" style="background:white;">       
+									 <table class="table" style="font-weight:bold ; background: white; color:#740F2D;">
 										 <tr>
 											 <td>Bachelor Project</td>
 											 <td>&emsp;</td>

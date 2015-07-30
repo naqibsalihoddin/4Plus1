@@ -109,7 +109,10 @@ float komen_m = -1;
     <body>
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px">
+         
+		  <img src="Images/headerbg3.png" alt="" class="home-img">
+
           <div id="Top">
             <div id="TopContent">
                 
@@ -117,13 +120,13 @@ float komen_m = -1;
         </div> 
          <div id="BodyContent">
              <form>
-                     <h2>Main Asscessor(Panel)PSM 1 </h2>
+				 <h2 style="font-weight:bold; color:#FCF5CA;">Main Asscessor(Panel)PSM 1 </h2>
                      <center>
                     
                     <fieldset id="titleSuggestion">
                         <legend>Evaluation form</legend>
                         <center>
-                            <table>
+                            <table >
                                 <tr>
                                     <td id="text" width="200px" >Name</td>
                                     <td id="colon">:</td>

@@ -88,12 +88,12 @@ if ((!(UserSession==null))&&(UserType.equals("3"))) {
         
 
         <center>
-            <h2>Presentation room</h2>
+            <h2 style="font-weight:bold; color:#fcf5ca;">Presentation room</h2>
             <form name="quotaLec">
                     
                        <center>
                          <table style="width:50%" class="table table-hover table-bordered">
-                             <tr bgcolor="#ebebeb" style="font-weight:bold" align="center" >
+                             <tr bgcolor="#fcf5ca" style="font-weight:bold;color:#740f2d;" align="center" >
                                  
                                  <td width="20px">No.</td>
                                  <td>Presentation Room</td>
@@ -115,7 +115,7 @@ if ((!(UserSession==null))&&(UserType.equals("3"))) {
                                                         editURL = "Images/edit_24_2.jpg";
                                                     }
                              %>
-                             <tr>
+                             <tr style="background:white;">
                                  <td align="center"><%=i+1%></td>
                                  <td><%=roomName.get(i)%></td>
                                  <td widht="50px" >
@@ -150,9 +150,9 @@ if ((!(UserSession==null))&&(UserType.equals("3"))) {
                                     <table class="table table-bordered">
                                         <tr>
           
-                                            <td bgcolor="#ebebeb" colspan="4"><b>Add New Presentation Room</td>
+                                            <td bgcolor="#fcf5ca" style="color:#740f2d" colspan="4"><b>Add New Presentation Room</td>
                                             </tr>
-                                            <tr>
+                                            <tr style="background:white;">
                                                 <td >Presentation Room</td>
                                                 
                                                 <td colspan="3"><input class="form-control" id="inputText" type="text" name="demoRoom"></td>

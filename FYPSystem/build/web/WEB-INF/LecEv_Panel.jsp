@@ -79,22 +79,23 @@ String queryProfile ="Select* from lecturer where staffNo='"+UserSession+"'";
 
        
       
-      <div id="Wrapper">
+      <div id="Wrapper" style="padding-top:50px;">
          <%@ include file="headerlecture.jsp" %>
+			 <img src="Images/headerbg3.png" alt="" class="home-img">
 
    
-    <div class="container">
+
     <div style="height:auto" id="WrapperBody">
-        <br>
+
         <form>
-            <center><h2>Main Assessor (Panel) PSM1</h2></center>
-                    <table class="table" style="width:60%;margin: auto">
-                        <tr style="font-weight:bold" align="center">
-                             <td bgcolor="#fa8072" width="20px">No.</td>   
-                             <td bgcolor="#fa8072" width="200px">Student Name</td>
-                             <td bgcolor="#fa8072" width="100px">Metric No</td>
-                             <td bgcolor="#fa8072" width="250px">Project Title</td>
-                             <td bgcolor="#fa8072">Evaluation Form</td>
+			<center><h2 style="font-weight:bold; color:#FCF5CA">Main Assessor (Panel) PSM1</h2></center>
+                    <table class="table" style="width:60%;margin: auto ;background: white;">
+						<tr style="font-weight:bold; color:#740F2D;" align="center">
+                             <td bgcolor="white" width="20px">No.</td>   
+                             <td bgcolor="white" width="200px">Student Name</td>
+                             <td bgcolor="white" width="100px">Metric No</td>
+                             <td bgcolor="white" width="250px">Project Title</td>
+                             <td bgcolor="white">Evaluation Form</td>
                         </tr>
                         <% if(!(row==0)){
                             for(int i=0;i<row;i++){
@@ -124,10 +125,10 @@ String queryProfile ="Select* from lecturer where staffNo='"+UserSession+"'";
                     <br><br>
                     <table class="table" style="margin:auto;width: 50%" cellpadding="0px" cellspacing="0px">
                        <tr>
-                            <td><span class="glyphicon glyphicon-list-alt" style="color:#000;font-size: 1.5em"></span></td>
-                            <td style="line-height:24px;">Evaluation (Done)</td>
+                            <td><span class="glyphicon glyphicon-list-alt" style="color:#fff;font-size: 1.5em"></span></td>
+						   <td style="line-height:24px; color:#FCF5CA">Evaluation (Done)</td>
                             <td><span class="glyphicon glyphicon-list-alt" style="color:#FF0000;font-size: 1.5em"></span></td>
-                            <td style="line-height:24px;">Evaluation (Pending)</td>
+						   <td style="line-height:24px; color:#FCF5CA">Evaluation (Pending)</td>
                         </tr>
                     </table>
                     </form>

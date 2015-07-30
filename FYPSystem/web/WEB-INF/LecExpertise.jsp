@@ -36,7 +36,7 @@ String Name = (String)session.getAttribute("name");
     
      String proField="";
      
-     String color ="#fff0f5";
+     String color ="white";
      
      String imgDelete ="";
      String imgEdit ="";
@@ -171,11 +171,11 @@ String Name = (String)session.getAttribute("name");
                                             }
                                         
                            %>
-                       <tr style=" border: 1px solid grey;">
-                           <td><div style="font-weight:bold"><%=proField%></div><br style="line-height:1px">
+							 <tr style="background:white; border: 1px solid grey; color:#740f2d">
+                           <td><div style="font-weight:bold; "><%=proField%></div><br style="line-height:1px">
                             <%=description.get(i)%></td>
-                           <td valign="top" align="center"><a style="color:#000" href="javascript:;" onclick="editExpertiseID('<%=expertisedId.get(i)%>');"><i style="font-size:1.5em;padding-top: 10px" class="glyphicon glyphicon-edit"></i></a></td>
-                            <td valign="top" align="center"><a style="color:#000" href="javascript:;" onclick="deleteExpertiseID('<%=expertisedId.get(i)%>');"><i style="font-size:1.5em;padding-top:  10px" class="glyphicon glyphicon-floppy-remove"></i></a></td>
+                           <td valign="top" align="center"><a style="color:#740f2d" href="javascript:;" onclick="editExpertiseID('<%=expertisedId.get(i)%>');"><i style="font-size:1.5em;padding-top: 10px" class="glyphicon glyphicon-edit"></i></a></td>
+                            <td valign="top" align="center"><a style="color:#740f2d" href="javascript:;" onclick="deleteExpertiseID('<%=expertisedId.get(i)%>');"><i style="font-size:1.5em;padding-top:  10px" class="glyphicon glyphicon-floppy-remove"></i></a></td>
                             
                                 
                         </tr>
@@ -201,12 +201,12 @@ String Name = (String)session.getAttribute("name");
                                 <br>
                                     <fieldset id="titleSuggestion">
 										<legend style="color:#FCF5CA">Add Expertised Field</legend>
-                                            <table>
+                                            <table style="background:white;">
                                                  <tr>
                                                     <td class="desc-text">Expertise Field</td>
                                                     <td id="colon">:</td>
                                                     <td colspan="2" align="left">
-                                                        <select class="form-control" name="addProField" id="inputText">
+                                                        <select class="form-control" name="addProField" id="inputText" >
                                                             <option value="">Please Select</option>
                                                             <option value="SED01">Software Engineering</option>
                                                             <option value="SED02">Computational Intelligent</option>
@@ -249,7 +249,7 @@ String Name = (String)session.getAttribute("name");
                                 <br style="line-height:5px">
                                 <br>
                                     <fieldset id="titleSuggestion">
-                                        <legend>Edit Expertised Field</legend>
+                                        <legend style="font-weight:bold; color:#fcf5ca;">Edit Expertised Field</legend>
                                             <table>
                                                  <tr>
                                                     <td class="desc-text">Expertise Field</td>

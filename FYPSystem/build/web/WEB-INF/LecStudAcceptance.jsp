@@ -164,12 +164,12 @@ String selectedSemester = (String)request.getAttribute("semester");
 				 <span>
 
 					 <div style="width:50%" class="panel panel-default">
-						 <div class="panel-heading">
-							 <h2 style="color:#000" class="panel-title">Select Student</h2>
+						 <div class="panel-heading" style="background: #FCF5CA ">
+							 <h2 style="color:#740f2d; font-weight:bold;" class="panel-title">Select Student</h2>
 						 </div>
-						 <div class="panel-body alert-warning">
+						 <div class="panel-body alert-warning" style="background:white;">
 							 <form name="studentAcceptance"> 
-								 <table>
+								 <table style="color:#740f2d;">
 									 <tr>
 										 <td><b>Bachelor Project</b></td>
 										 <td>&emsp;</td>
